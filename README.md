@@ -1,80 +1,147 @@
-# Tyrosoft Dev — Production Marketing & Engineering Platform
+<div align="center">
+  <img src="public/logo.png" alt="Tyrosoft Dev Logo" width="120" height="120" style="border-radius: 20px;" />
+  <h1>TYROSOFT DEV</h1>
+  <p><strong>Custom Software Engineering &amp; AI Automation for Ambitious Businesses</strong></p>
+  <p>📍 Islamabad, Pakistan | 📞 +92 307 5357545 | ✉️ contact@tyrosoftdev.com</p>
 
-Tyrosoft Dev is a high-impact software engineering agency and AI automation company. This repository contains the complete Next.js 15 (App Router) production marketing website built with TypeScript, Tailwind CSS, Framer Motion, and Lucide Icons.
+  <p>
+    <a href="https://tyrosoftdev.com"><img src="https://img.shields.io/badge/Website-tyrosoftdev.com-6D28D9?style=for-the-badge&logo=vercel" alt="Website" /></a>
+    <a href="#-tech-stack"><img src="https://img.shields.io/badge/Next.js-15_(App_Router)-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+    <a href="#-tech-stack"><img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
+    <a href="#-tech-stack"><img src="https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" /></a>
+  </p>
+</div>
 
 ---
 
-## 🌟 Key Features
+## 📖 About Tyrosoft Dev
 
-- **Dark Editorial Aesthetic**: Deep near-black background (`#07050B`), dark purple card surfaces (`#0F0B16`), and exact brand purple (`#6D28D9`) accents.
-- **AI Automation Spotlight**: Interactive before/after operational cost-reduction comparison with automated metrics.
-- **8 Core Capability Blocks**: Complete breakdown for Web Dev, App Dev, Graphic Design, Video Editing, Marketing, IT Support, Free Consultation, and AI Automation.
-- **Filterable Work Portfolio**: Interactive category filters (Web, App, Design, Video, Automation) with project detail modals.
-- **Email-Ready Contact Route Handler**: Working contact form with server-side validation and Resend/SMTP integration support (`/api/contact`).
-- **Cursor-Following Spotlight Cards**: Micro-interactions with mouse-tracking radial purple glow effects.
-- **SEO & Accessibility Ready**: OpenGraph metadata, JSON-LD Organization schema, dynamic `sitemap.xml`, `robots.txt`, and full keyboard/screen-reader accessibility (`prefers-reduced-motion` respected).
+**Tyrosoft Dev** is a high-performance software startup based in **Islamabad, Pakistan**. We engineer custom web applications, mobile platforms, dark editorial visual identity systems, and autonomous AI workflow automations that help businesses reduce manual operational costs by up to 60%.
+
+This repository contains the complete production-ready marketing website built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
+
+---
+
+## ✨ Key Features & Highlights
+
+- 🎨 **Dark Editorial Aesthetic**: Deep near-black background (`#07050B`), dark card surfaces (`#0F0B16`), and exact brand purple (`#6D28D9`) highlights.
+- ⚡ **Sub-Second Performance**: Next.js App Router, Server Components, and optimized image delivery yielding a 95+ Lighthouse performance target.
+- 🤖 **AI Automation Spotlight**: Interactive before/after operational cost comparison showcasing automated RAG and LLM agent workflows.
+- 🛠️ **8 Core Capabilities**: Dedicated detailed sections for:
+  1. **AI Automation for Businesses**
+  2. **Web Development (Next.js)**
+  3. **App Development (iOS & Android)**
+  4. **Graphic Design & Brand Systems**
+  5. **Video Editing & Motion Graphics**
+  6. **Growth Marketing Strategy**
+  7. **IT Support & Cloud Consulting**
+  8. **Free Strategic Consultation**
+- 💼 **Filterable Work Portfolio**: Filter case studies by category (`Web`, `App`, `Design`, `Video`, `Automation`) with interactive project detail modals.
+- 📬 **Free Consultation Form**: Production contact form with client-side validation and instant email dispatching via **Web3Forms** (routed directly to `muneebsaleem402@gmail.com`).
+- 🎯 **SEO & Accessibility**: Complete metadata per page, OpenGraph tags, JSON-LD `Organization` schema, `sitemap.xml`, `robots.txt`, and full support for `prefers-reduced-motion`.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animation**: Framer Motion
-- **Icons**: Lucide React
-- **Fonts**: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Badges)
+| Category | Technologies |
+| :--- | :--- |
+| **Framework** | [Next.js 15](https://nextjs.org/) (App Router & Server Components) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) & Vanilla CSS Tokens |
+| **Animations** | [Framer Motion](https://www.framer.com/motion/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Typography** | `Space Grotesk` (Display), `Inter` (Body), `JetBrains Mono` (Badges) |
+| **Form Dispatch** | [Web3Forms API](https://web3forms.com/) (100% Free Live Email Delivery) |
 
 ---
 
-## 🚀 Quick Start
+## 📂 Repository Structure
 
-### 1. Prerequisites
-Ensure you have **Node.js 18.x+** and **npm** installed.
+```tree
+TyrosoftDev/
+├── public/                  # Favicons, logo.png, logo.svg & static assets
+│   ├── logo.png             # Official Tyrosoft Dev brand logo
+│   ├── favicon.ico          # Browser tab icon
+│   └── apple-icon.png       # iOS home screen icon
+├── src/
+│   ├── app/                 # Next.js App Router pages & endpoints
+│   │   ├── layout.tsx       # Root layout with fonts, SEO & JSON-LD
+│   │   ├── page.tsx         # Home page (9 dark editorial sections)
+│   │   ├── services/        # 8 Detailed capability blocks
+│   │   ├── work/            # Filterable portfolio & modal view
+│   │   ├── about/           # Mission, story & values
+│   │   ├── contact/         # Booking form & consultation details
+│   │   ├── api/contact/     # Contact route handler (Web3Forms/Resend)
+│   │   ├── sitemap.ts       # Dynamic sitemap generator
+│   │   └── robots.ts        # Crawler directives
+│   ├── components/          # Modular UI components
+│   │   ├── ui/              # Button, SpotlightCard, Reveal, Badge, Accordion
+│   │   ├── layout/          # Navbar & Footer
+│   │   ├── home/            # Hero, Bento Grid, AI Spotlight, Case Studies
+│   │   ├── work/            # WorkGrid & Project Modal
+│   │   └── contact/         # ContactForm component
+│   ├── data/                # Typed content files
+│   │   ├── company.ts       # Company contact info & stats
+│   │   ├── services.ts      # 8 Service definitions
+│   │   ├── projects.ts      # Case studies dataset
+│   │   ├── testimonials.ts  # Client quotes & feedback
+│   │   └── faqs.ts          # Frequently asked questions
+│   └── lib/                 # Utility helpers (cn class merger)
+├── .env                     # Web3Forms API key & receiver email
+├── README.md                # Project documentation
+└── package.json             # NPM dependencies & scripts
+```
 
-### 2. Install Dependencies
+---
+
+## 🚀 Getting Started
+
+### 1. Clone & Install
 ```bash
+git clone https://github.com/tyrosoftdev/tyrosoftdev.git
+cd TyrosoftDev
 npm install
 ```
 
-### 3. Environment Setup
-Copy `.env.example` to `.env.local`:
-```bash
-cp .env.example .env.local
-```
+### 2. Environment Setup
+The `.env` file is pre-configured with Web3Forms live email dispatching:
 
-Configure your email credentials if you want live form submissions routed to your inbox via Resend:
 ```env
-RESEND_API_KEY=re_123456789_abcdefg
-CONTACT_RECEIVER_EMAIL=hello@tyrosoftdev.com
+WEB3FORMS_ACCESS_KEY=5c5d2c4f-f283-4b04-af99-57413583ae39
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=5c5d2c4f-f283-4b04-af99-57413583ae39
+CONTACT_RECEIVER_EMAIL=muneebsaleem402@gmail.com
 ```
 
-### 4. Run Locally
+### 3. Run Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the live website.
 
 ---
 
-## 📦 Vercel Deployment
+## 🚢 Production Build & Vercel Deployment
 
-Deploying to Vercel takes less than 2 minutes:
+### Build Locally
+To test the production build locally:
+```bash
+npm run build
+npm run start
+```
 
-1. Push your repository to GitHub / GitLab / Bitbucket.
-2. Import the project into your [Vercel Dashboard](https://vercel.com/new).
-3. Set the Environment Variables (`RESEND_API_KEY`, `CONTACT_RECEIVER_EMAIL`) in the Vercel project settings.
-4. Click **Deploy**. Vercel will automatically build and deploy the Next.js App Router application to global edge networks.
+### Deploying to Vercel
+1. Push this repository to GitHub.
+2. Import the repository into your [Vercel Dashboard](https://vercel.com/new).
+3. Vercel automatically detects Next.js. Click **Deploy**.
+4. Your website will be live globally in less than 2 minutes with automatic SSL and CDN caching.
 
 ---
 
-## 📝 Replacing Placeholder Content
+## 📞 Contact & Support
 
-All application data is centralized in typed data files under `src/data/` for easy editing:
+- **Email**: [contact@tyrosoftdev.com](mailto:contact@tyrosoftdev.com)
+- **Phone**: [+92 307 5357545](tel:+923075357545)
+- **Location**: Islamabad, Pakistan
 
-1. **Client Testimonials (`src/data/testimonials.ts`)**:
-   - Replace placeholder author names (`[REPLACE: Marcus Vance]`), positions, and quotes with verified client testimonials.
-2. **Company Contact Details (`src/data/company.ts`)**:
-   - Update official email, phone number, physical address, and social media links.
-3. **Portfolio Case Studies (`src/data/projects.ts`)**:
-   - Add your actual client project stories, live URLs, and screenshots.
+© 2026 **Tyrosoft Dev LLC**. All rights reserved.
