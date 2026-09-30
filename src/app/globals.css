@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #07050B;
+  --color-surface-dark: #0F0B16;
+  --color-surface-elevated: #15101F;
+  --color-brand-purple: #6D28D9;
+  --color-brand-hover: #8B5CF6;
+  --color-brand-accent: #A78BFA;
+  --color-body-light: #EDEAF5;
+  --color-muted-text: #8C8799;
+  --color-purple-border: rgba(167, 139, 250, 0.12);
+  
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+:root {
+  --background: #07050B;
+  --foreground: #EDEAF5;
+  --surface: #0F0B16;
+  --surface-elevated: #15101F;
+  --brand-purple: #6D28D9;
+  --brand-hover: #8B5CF6;
+  --brand-accent: #A78BFA;
+  --muted: #8C8799;
+  --border-purple: rgba(167, 139, 250, 0.12);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #07050B;
+  color: #EDEAF5;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  selection-background-color: #6D28D9;
+  selection-color: #ffffff;
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(167, 139, 250, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.03) 1px, transparent 1px);
+}
+
+/* Faint Purple Ambient Hero Glow */
+.bg-hero-glow {
+  background: radial-gradient(
+    circle at 50% -10%,
+    rgba(109, 40, 217, 0.18) 0%,
+    rgba(139, 92, 246, 0.05) 40%,
+    transparent 70%
+  );
+}
+
+/* Card Spotlight Follow Effect */
+.spotlight-card {
+  position: relative;
+  background: #0F0B16;
+  border: 1px solid rgba(167, 139, 250, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 25px rgba(109, 40, 217, 0.12);
+}
+
+/* Section Divider */
+.hairline-border {
+  border-color: rgba(167, 139, 250, 0.12);
+}
+
+/* Monospace label pills */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #A78BFA;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07050B;
+}
+::-webkit-scrollbar-thumb {
+  background: #15101F;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6D28D9;
+}
