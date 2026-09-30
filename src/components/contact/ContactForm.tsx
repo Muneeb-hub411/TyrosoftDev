@@ -73,10 +73,28 @@ export default function ContactForm() {
     }
 
     try {
-      const res = await fetch("/api/contact", {
+      // Direct Web3Forms submission with key 5c5d2c4f-f283-4b04-af99-57413583ae39 routed to muneebsaleem402@gmail.com
+      const accessKey =
+        process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+        "5c5d2c4f-f283-4b04-af99-57413583ae39";
+
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New Free Consultation Request: ${formData.service} from ${formData.name}`,
+          from_name: "Tyrosoft Dev Website",
+          to_email: "muneebsaleem402@gmail.com",
+          name: formData.name,
+          email: formData.email,
+          service: formData.service,
+          budget: formData.budget,
+          message: formData.message,
+        }),
       });
 
       const data = await res.json();
@@ -84,7 +102,8 @@ export default function ContactForm() {
       if (res.ok && data.success) {
         setStatus({
           type: "success",
-          message: data.message || "Consultation request sent successfully!",
+          message:
+            "Thank you! Your inquiry has been sent directly to muneebsaleem402@gmail.com. Our senior team will get back to you within 12 hours.",
         });
         setFormData({
           name: "",
@@ -94,10 +113,31 @@ export default function ContactForm() {
           message: "",
         });
       } else {
-        setStatus({
-          type: "error",
-          message: data.error || "Failed to submit request. Please try again.",
+        // Fallback to Next.js route handler
+        const apiRes = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         });
+        const apiData = await apiRes.json();
+        if (apiRes.ok && apiData.success) {
+          setStatus({
+            type: "success",
+            message: apiData.message || "Consultation request sent successfully!",
+          });
+          setFormData({
+            name: "",
+            email: "",
+            service: serviceOptions[0],
+            budget: budgetRanges[1],
+            message: "",
+          });
+        } else {
+          setStatus({
+            type: "error",
+            message: data.message || apiData.error || "Failed to submit request. Please try again.",
+          });
+        }
       }
     } catch (err) {
       console.error(err);
@@ -215,7 +255,7 @@ export default function ContactForm() {
           <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-sm flex items-start gap-3 animate-fadeIn">
             <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold">Request Received!</p>
+              <p className="font-semibold">Consultation Request Received!</p>
               <p className="text-xs text-emerald-300/80 mt-0.5">{status.message}</p>
             </div>
           </div>
@@ -246,7 +286,7 @@ export default function ContactForm() {
             )
           }
         >
-          {loading ? "Submitting Inquiry..." : "Submit Consultation Request"}
+          {loading ? "Sending Request..." : "Submit Consultation Request"}
         </Button>
       </form>
     </SpotlightCard>

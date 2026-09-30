@@ -6,6 +6,7 @@ export interface ContactRequestBody {
   service: string;
   budget: string;
   message: string;
+  access_key?: string;
 }
 
 export async function POST(request: Request) {
@@ -42,11 +43,45 @@ export async function POST(request: Request) {
       );
     }
 
+    // 1. FREE WEB3FORMS INTEGRATION (No credit card or SMTP server needed)
+    // Get a free access key at https://web3forms.com in 10 seconds for contact@tyrosoftdev.com
+    const web3AccessKey =
+      process.env.WEB3FORMS_ACCESS_KEY || process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
     const resendApiKey = process.env.RESEND_API_KEY;
-    const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "hello@tyrosoftdev.com";
+    const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "contact@tyrosoftdev.com";
 
-    // If Resend API Key is provided in environment variables, dispatch email
-    if (resendApiKey) {
+    let emailSent = false;
+
+    // Try Web3Forms Free API if key is present
+    if (web3AccessKey) {
+      try {
+        const web3res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: web3AccessKey,
+            subject: `New Free Consultation Inquiry: ${service} - ${name}`,
+            from_name: "Tyrosoft Dev Website",
+            to_email: receiverEmail,
+            name,
+            email,
+            service,
+            budget: budget || "Not specified",
+            message,
+          }),
+        });
+
+        const web3Data = await web3res.json();
+        if (web3Data.success) {
+          emailSent = true;
+        }
+      } catch (wErr) {
+        console.warn("Web3Forms dispatch warning:", wErr);
+      }
+    }
+
+    // Try Resend API fallback if configured
+    if (!emailSent && resendApiKey) {
       try {
         const emailRes = await fetch("https://api.resend.com/emails", {
           method: "POST",
@@ -70,30 +105,32 @@ export async function POST(request: Request) {
           }),
         });
 
-        if (!emailRes.ok) {
-          const errData = await emailRes.json();
-          console.warn("Resend API warning:", errData);
+        if (emailRes.ok) {
+          emailSent = true;
         }
-      } catch (emailErr) {
-        console.error("Failed to send email via Resend:", emailErr);
+      } catch (resendErr) {
+        console.warn("Resend API warning:", resendErr);
       }
-    } else {
-      // In development mode without API key, log submission info
-      console.log("Form Submission Received (Email dispatch ready):", {
-        name,
-        email,
-        service,
-        budget,
-        message,
-        timestamp: new Date().toISOString(),
-      });
     }
+
+    // Console log backup for dev mode
+    console.log("Form Submission Processed:", {
+      name,
+      email,
+      service,
+      budget,
+      message,
+      receiverEmail,
+      timestamp: new Date().toISOString(),
+    });
 
     return NextResponse.json(
       {
         success: true,
         message:
-          "Thank you! Your inquiry has been received. Our senior team will reach out within 12 hours.",
+          "Thank you! Your consultation inquiry has been received. Our team will reach out to " +
+          email +
+          " within 12 hours.",
         data: { name, email, service, budget },
       },
       { status: 200 }
