@@ -131,6 +131,10 @@ export const servicesData: ServiceItem[] = [
     title: "Graphic Design",
     badge: "Brand Identity",
     iconName: "Palette",
+    shortDescription:
+      "Bespoke brand identities, dark editorial visual systems, vector emblem typography, and Figma UI design systems.",
+    fullDescription:
+      "We forge distinctive visual identities that separate your brand from cookie-cutter templates. From vector logo marks to complete design systems.",
     included: [
       "Comprehensive Brand Identity Systems",
       "Vector Logo Marks & Typography Suites",
@@ -162,6 +166,10 @@ export const servicesData: ServiceItem[] = [
     title: "Video Editing",
     badge: "Motion & Media",
     iconName: "Video",
+    shortDescription:
+      "High-conversion SaaS product trailers, 4K video ads, kinetic typography, and web-ready motion graphics.",
+    fullDescription:
+      "Transform raw video footage into cinematic product trailers and social ad cuts that capture immediate user attention.",
     included: [
       "Product Demo & SaaS Feature Walkthroughs",
       "High-Conversion Social Media Video Ads (Reels, TikTok)",
@@ -193,6 +201,10 @@ export const servicesData: ServiceItem[] = [
     title: "Marketing Strategy & Growth",
     badge: "Revenue Growth",
     iconName: "TrendingUp",
+    shortDescription:
+      "Data-driven growth funnels, performance ad campaigns, SEO content engineering, and conversion rate optimization.",
+    fullDescription:
+      "We scale customer acquisition using programmatic SEO, high-conversion landing pages, and targeted ad funnels.",
     included: [
       "Performance Ad Campaign Setup (Meta, Google, LinkedIn)",
       "Conversion Rate Optimization (CRO) & A/B Testing",
@@ -224,6 +236,10 @@ export const servicesData: ServiceItem[] = [
     title: "IT Support & Consulting",
     badge: "Infrastructure",
     iconName: "ShieldCheck",
+    shortDescription:
+      "Cloud architecture, DevOps CI/CD automation, cybersecurity audits, and 24/7 infrastructure reliability.",
+    fullDescription:
+      "We secure and optimize your server infrastructure for 99.99% uptime, sub-second latency, and enterprise compliance.",
     included: [
       "Cloud Infrastructure Architecture (AWS, GCP, Vercel)",
       "Cybersecurity Audits & Penetration Testing",
@@ -255,6 +271,10 @@ export const servicesData: ServiceItem[] = [
     title: "Free Strategic Consultation",
     badge: "Zero Risk",
     iconName: "MessageSquare",
+    shortDescription:
+      "45-minute 1-on-1 technical strategy session with a senior engineer. Zero sales pitch, 100% actionable value.",
+    fullDescription:
+      "Schedule a zero-risk strategy call to review your codebase or product idea, map out AI cost savings, and receive a fixed project roadmap.",
     included: [
       "45-Minute 1-on-1 Video Session with Senior Engineer",
       "Tech Stack & Codebase Architectural Review",
