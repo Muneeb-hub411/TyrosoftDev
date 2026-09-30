@@ -2,9 +2,9 @@ export const companyConfig = {
   name: "Tyrosoft Dev",
   legalName: "Tyrosoft Dev LLC",
   tagline: "High-Impact Engineering & AI Automation for Ambitious Businesses",
-  email: "hello@tyrosoftdev.com",
-  phone: "+1 (800) 555-TYRO",
-  location: "Austin, TX & Remote Worldwide",
+  email: "contact@tyrosoftdev.com",
+  phone: "+92 307 5357545",
+  location: "Islamabad, Pakistan",
   availability: "Accepting new client projects for Q4 & 2026",
   stats: [
     { value: "60%", label: "Average Operational Cost Reduction" },

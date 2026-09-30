@@ -76,7 +76,7 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="text-[#8C8799] text-base leading-relaxed">
-                  We are a lean team of software architects, mobile engineers, UI designers, and AI specialists based in Austin, TX with global partners. We work with ambitious startups and mid-sized enterprises who need high-impact technical execution without agency bureaucracy.
+                  We are a lean team of software architects, mobile engineers, UI designers, and AI specialists based in Islamabad, Pakistan working with global partners. We work with ambitious startups and mid-sized enterprises who need high-impact technical execution without agency bureaucracy.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -114,6 +114,7 @@ export default function AboutPage() {
 
                   <div className="space-y-2 text-sm">
                     <p className="text-[#A78BFA]">const <span className="text-white">tyrosoftManifest</span> = &#123;</p>
+                    <p className="pl-4 text-[#8C8799]">location: <span className="text-emerald-400">&quot;Islamabad, Pakistan&quot;</span>,</p>
                     <p className="pl-4 text-[#8C8799]">founderMission: <span className="text-emerald-400">&quot;Eliminate manual operational bloat&quot;</span>,</p>
                     <p className="pl-4 text-[#8C8799]">coreStack: [<span className="text-amber-300">&quot;Next.js 15&quot;</span>, <span className="text-amber-300">&quot;Python AI&quot;</span>, <span className="text-amber-300">&quot;Tailwind&quot;</span>],</p>
                     <p className="pl-4 text-[#8C8799]">deliveryModel: <span className="text-emerald-400">&quot;Fixed-Scope Milestones&quot;</span>,</p>

@@ -15,29 +15,43 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-[rgba(167,139,250,0.08)]">
           {/* Brand & Mission Column */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block">
-              <div className="relative w-44 h-10">
+            <Link href="/" className="inline-flex items-center gap-3">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-[rgba(167,139,250,0.2)] shadow-md shrink-0">
                 <Image
-                  src="/logo.svg"
-                  alt="Tyrosoft Dev"
+                  src="/logo.png"
+                  alt="Tyrosoft Dev Logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-cover"
                 />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display font-extrabold text-lg text-[#EDEAF5] tracking-wider leading-none">
+                  TYROSOFT<span className="text-[#A78BFA]">DEV</span>
+                </span>
+                <span className="text-[10px] font-mono text-[#8C8799] tracking-widest uppercase mt-0.5">
+                  COMPANY
+                </span>
               </div>
             </Link>
             <p className="text-sm text-[#8C8799] leading-relaxed max-w-sm">
               Engineering high-impact web apps, mobile solutions, AI automations, and modern digital experiences that cut operational costs.
             </p>
-            <div className="pt-2 flex flex-col gap-2 text-xs text-[#A78BFA] font-mono">
+            <div className="pt-2 flex flex-col gap-2.5 text-xs text-[#A78BFA] font-mono">
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5" />
-                <a href={`mailto:${companyConfig.email}`} className="hover:underline">
+                <Mail className="w-3.5 h-3.5 text-[#8B5CF6]" />
+                <a href={`mailto:${companyConfig.email}`} className="hover:underline text-[#EDEAF5]">
                   {companyConfig.email}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5" />
-                <span>{companyConfig.location}</span>
+                <Phone className="w-3.5 h-3.5 text-[#8B5CF6]" />
+                <a href={`tel:${companyConfig.phone.replace(/\s+/g, "")}`} className="hover:underline text-[#EDEAF5]">
+                  {companyConfig.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#8B5CF6]" />
+                <span className="text-[#EDEAF5]">{companyConfig.location}</span>
               </div>
             </div>
           </div>
@@ -89,7 +103,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services#web-development" className="hover:text-white transition-colors">
-                  Next.js Web Apps
+                  Web Development
                 </Link>
               </li>
               <li>
@@ -138,12 +152,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Copyright Strip */}
+        {/* Bottom Copyright Strip - Clean without tech stack reference or Next.js logo */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C8799]">
           <p>© {new Date().getFullYear()} Tyrosoft Dev LLC. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span>Built with Next.js &amp; Tailwind</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6D28D9]" />
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="font-mono text-[#A78BFA]">SYSTEM STATUS: OPERATIONAL</span>
           </div>
         </div>

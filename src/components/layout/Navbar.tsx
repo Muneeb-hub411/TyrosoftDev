@@ -33,25 +33,33 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#07050B]/85 backdrop-blur-md border-b border-[rgba(167,139,250,0.12)] py-3 shadow-2xl"
-          : "bg-transparent py-5"
+          ? "bg-[#07050B]/90 backdrop-blur-md border-b border-[rgba(167,139,250,0.12)] py-2.5 shadow-2xl"
+          : "bg-transparent py-4"
       }`}
     >
       <Container size="lg">
         <div className="flex items-center justify-between">
-          {/* Brand Logo with clear space */}
+          {/* User's Custom Brand Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] rounded-lg p-1"
+            className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] rounded-xl p-1"
           >
-            <div className="relative w-36 sm:w-44 h-9">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[rgba(167,139,250,0.2)] shadow-md group-hover:border-[#8B5CF6] transition-colors shrink-0">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Tyrosoft Dev Logo"
                 fill
                 priority
-                className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
+                className="object-cover"
               />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-base sm:text-lg text-[#EDEAF5] tracking-wider leading-none">
+                TYROSOFT<span className="text-[#A78BFA]">DEV</span>
+              </span>
+              <span className="text-[10px] font-mono text-[#8C8799] tracking-widest uppercase mt-0.5">
+                COMPANY
+              </span>
             </div>
           </Link>
 
@@ -94,7 +102,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-xl bg-[#0F0B16] border border-[rgba(167,139,250,0.15)] text-[#EDEAF5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6]"
+            className="md:hidden p-2.5 rounded-xl bg-[#0F0B16] border border-[rgba(167,139,250,0.15)] text-[#EDEAF5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6]"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

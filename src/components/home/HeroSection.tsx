@@ -23,7 +23,7 @@ export default function HeroSection() {
                 00 // SOFTWARE STARTUP &amp; AI AUTOMATION
               </Badge>
               <span className="hidden sm:inline-block text-xs font-mono text-[#8C8799]">
-                [AUSTIN, TX &amp; GLOBAL]
+                [ISLAMABAD, PAKISTAN &amp; GLOBAL]
               </span>
             </div>
           </Reveal>

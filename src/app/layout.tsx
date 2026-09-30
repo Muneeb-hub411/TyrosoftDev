@@ -45,14 +45,15 @@ export const metadata: Metadata = {
     "Marketing Strategy",
     "IT Consulting",
     "Tyrosoft Dev",
+    "Islamabad Pakistan Software Company",
   ],
   authors: [{ name: "Tyrosoft Dev Team", url: "https://tyrosoftdev.com" }],
   creator: "Tyrosoft Dev",
   publisher: "Tyrosoft Dev",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "Tyrosoft Dev | Custom Software & AI Automation",
@@ -62,10 +63,10 @@ export const metadata: Metadata = {
     siteName: "Tyrosoft Dev",
     images: [
       {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Tyrosoft Dev - Software & AI Automation",
+        url: "/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Tyrosoft Dev Logo",
       },
     ],
     locale: "en_US",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
     title: "Tyrosoft Dev | Custom Software & AI Automation",
     description:
       "Engineering high-impact web apps, mobile solutions, and AI automations.",
-    images: ["/og-image.svg"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -94,14 +95,20 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Tyrosoft Dev",
     url: "https://tyrosoftdev.com",
-    logo: "https://tyrosoftdev.com/logo.svg",
+    logo: "https://tyrosoftdev.com/logo.png",
     description:
       "Custom Software Engineering, Web & App Development, Graphic Design, Video Editing, Marketing, IT Consulting & AI Business Automation.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Islamabad",
+      addressCountry: "Pakistan",
+    },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@tyrosoftdev.com",
+      telephone: "+92 307 5357545",
+      email: "contact@tyrosoftdev.com",
       contactType: "customer service",
-      availableLanguage: "English",
+      availableLanguage: ["English", "Urdu"],
     },
     servicesOffered: [
       "Web Development",
