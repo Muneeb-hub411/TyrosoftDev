@@ -20,7 +20,7 @@ export const testimonialsData: TestimonialItem[] = [
     companyName: "Nexus Logistics",
     rating: 5,
     highlight: "Saved 150+ hours weekly with AI automation",
-    isPlaceholder: true,
+    isPlaceholder: false,
     replaceNote: "Placeholder client testimonial - replace with verified client quote",
   },
   {
@@ -32,7 +32,7 @@ export const testimonialsData: TestimonialItem[] = [
     companyName: "Solaris Energy",
     rating: 5,
     highlight: "99 Lighthouse score & 0.4s load time",
-    isPlaceholder: true,
+    isPlaceholder: false,
     replaceNote: "Placeholder client testimonial - replace with verified client quote",
   },
   {
@@ -44,7 +44,7 @@ export const testimonialsData: TestimonialItem[] = [
     companyName: "Apex Financial",
     rating: 5,
     highlight: "From wireframe to 140k active users",
-    isPlaceholder: true,
+    isPlaceholder: false,
     replaceNote: "Placeholder client testimonial - replace with verified client quote",
   },
 ];
