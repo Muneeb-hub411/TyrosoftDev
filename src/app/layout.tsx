@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "uU8PuKY5aCh0ij-bD6F1qCucOmgFzH070CU5SeuFLhs",
+    google: ["uU8PuKY5aCh0ij-bD6F1qCucOmgFzH070CU5SeuFLhs", "google4531cd20025931b6"],
   },
 };
 
@@ -156,6 +156,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} dark h-full antialiased`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="uU8PuKY5aCh0ij-bD6F1qCucOmgFzH070CU5SeuFLhs"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
