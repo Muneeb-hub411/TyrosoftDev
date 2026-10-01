@@ -22,9 +22,26 @@ import { Reveal } from "@/components/ui/Reveal";
 import { servicesData } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Services & Capabilities",
+  title: "Software Engineering & AI Services",
   description:
-    "Explore Tyrosoft Dev's 8 core software engineering, design, marketing, and AI automation services.",
+    "Explore Tyrosoft Dev's core software capabilities: AI Business Automation, Next.js Web Development, Mobile Apps, UI/UX Design, and Growth Marketing.",
+  keywords: [
+    "AI Business Automation",
+    "Web Development Services",
+    "Mobile App Engineering",
+    "UI/UX Design Agency",
+    "Digital Growth Marketing",
+    "Custom Software Capabilities",
+  ],
+  alternates: {
+    canonical: "https://tyrosoftdev.com/services",
+  },
+  openGraph: {
+    title: "Software Engineering & AI Services | Tyrosoft Dev",
+    description:
+      "Precision software engineering and AI workflow automations built by senior architects.",
+    url: "https://tyrosoftdev.com/services",
+  },
 };
 
 const iconMap: Record<string, React.ReactNode> = {

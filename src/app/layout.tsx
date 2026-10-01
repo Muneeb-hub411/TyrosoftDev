@@ -46,10 +46,14 @@ export const metadata: Metadata = {
     "IT Consulting",
     "Tyrosoft Dev",
     "Islamabad Pakistan Software Company",
+    "Custom Web Applications",
   ],
   authors: [{ name: "Tyrosoft Dev Team", url: "https://tyrosoftdev.com" }],
   creator: "Tyrosoft Dev",
   publisher: "Tyrosoft Dev",
+  alternates: {
+    canonical: "./",
+  },
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -82,6 +86,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -92,33 +103,47 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Tyrosoft Dev",
-    url: "https://tyrosoftdev.com",
-    logo: "https://tyrosoftdev.com/logo.png",
-    description:
-      "Custom Software Engineering, Web & App Development, Graphic Design, Video Editing, Marketing, IT Consulting & AI Business Automation.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Islamabad",
-      addressCountry: "Pakistan",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+92 307 5357545",
-      email: "contact@tyrosoftdev.com",
-      contactType: "customer service",
-      availableLanguage: ["English", "Urdu"],
-    },
-    servicesOffered: [
-      "Web Development",
-      "App Development",
-      "Graphic Design",
-      "Video Editing",
-      "Digital Marketing",
-      "IT Consulting",
-      "Free Business Consultation",
-      "AI Business Automation",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tyrosoftdev.com/#organization",
+        name: "Tyrosoft Dev",
+        url: "https://tyrosoftdev.com",
+        logo: "https://tyrosoftdev.com/logo.png",
+        description:
+          "Custom Software Engineering, Web & App Development, Graphic Design, Video Editing, Marketing, IT Consulting & AI Business Automation.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Islamabad",
+          addressCountry: "Pakistan",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+92 307 5357545",
+          email: "contact@tyrosoftdev.com",
+          contactType: "customer service",
+          availableLanguage: ["English", "Urdu"],
+        },
+        servicesOffered: [
+          "Web Development",
+          "App Development",
+          "Graphic Design",
+          "Video Editing",
+          "Digital Marketing",
+          "IT Consulting",
+          "Free Business Consultation",
+          "AI Business Automation",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tyrosoftdev.com/#website",
+        url: "https://tyrosoftdev.com",
+        name: "Tyrosoft Dev",
+        publisher: {
+          "@id": "https://tyrosoftdev.com/#organization",
+        },
+      },
     ],
   };
 

@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   title: "About Us & Engineering Philosophy",
   description:
     "Learn about Tyrosoft Dev's mission: building high-impact custom software and AI automations with senior engineering and zero fluff.",
+  keywords: [
+    "About Tyrosoft Dev",
+    "Software Engineering Philosophy",
+    "Islamabad Software Agency",
+    "AI Automation Team",
+  ],
+  alternates: {
+    canonical: "https://tyrosoftdev.com/about",
+  },
+  openGraph: {
+    title: "About Us & Engineering Philosophy | Tyrosoft Dev",
+    description:
+      "Tyrosoft Dev builds high-impact custom software and AI automations with senior engineering.",
+    url: "https://tyrosoftdev.com/about",
+  },
 };
 
 const values = [

@@ -10,6 +10,22 @@ export const metadata: Metadata = {
   title: "Selected Work & Case Studies",
   description:
     "Explore Tyrosoft Dev's portfolio of web platforms, mobile applications, dark UI design systems, and AI automation engines.",
+  keywords: [
+    "Software Case Studies",
+    "Portfolio Tyrosoft Dev",
+    "Web App Projects",
+    "AI Client Case Studies",
+    "Mobile Apps Portfolio",
+  ],
+  alternates: {
+    canonical: "https://tyrosoftdev.com/work",
+  },
+  openGraph: {
+    title: "Selected Work & Case Studies | Tyrosoft Dev",
+    description:
+      "Explore real-world software platforms, web apps, and AI automation systems built by Tyrosoft Dev.",
+    url: "https://tyrosoftdev.com/work",
+  },
 };
 
 export default function WorkPage() {
