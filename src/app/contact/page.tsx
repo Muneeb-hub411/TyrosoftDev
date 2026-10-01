@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   title: "Book a Free Consultation & Contact",
   description:
     "Schedule a zero-obligation 45-minute technical strategy call with Tyrosoft Dev senior engineers.",
+  keywords: [
+    "Book Software Consultation",
+    "Free Tech Strategy Call",
+    "Contact Tyrosoft Dev",
+    "Hire AI Automation Agency",
+  ],
+  alternates: {
+    canonical: "https://tyrosoftdev.com/contact",
+  },
+  openGraph: {
+    title: "Book a Free Consultation & Contact | Tyrosoft Dev",
+    description:
+      "Schedule a technical strategy call with Tyrosoft Dev senior architects.",
+    url: "https://tyrosoftdev.com/contact",
+  },
 };
 
 export default function ContactPage() {
