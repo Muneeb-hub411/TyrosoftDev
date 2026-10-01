@@ -44,14 +44,14 @@ This repository contains the complete production-ready marketing website built w
 
 ## 🛠️ Tech Stack
 
-| Category | Technologies |
-| :--- | :--- |
-| **Framework** | [Next.js 15](https://nextjs.org/) (App Router & Server Components) |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) & Vanilla CSS Tokens |
-| **Animations** | [Framer Motion](https://www.framer.com/motion/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Typography** | `Space Grotesk` (Display), `Inter` (Body), `JetBrains Mono` (Badges) |
+| Category          | Technologies                                                            |
+| :---------------- | :---------------------------------------------------------------------- |
+| **Framework**     | [Next.js 15](https://nextjs.org/) (App Router & Server Components)      |
+| **Language**      | [TypeScript](https://www.typescriptlang.org/)                           |
+| **Styling**       | [Tailwind CSS](https://tailwindcss.com/) & Vanilla CSS Tokens           |
+| **Animations**    | [Framer Motion](https://www.framer.com/motion/)                         |
+| **Icons**         | [Lucide React](https://lucide.dev/)                                     |
+| **Typography**    | `Space Grotesk` (Display), `Inter` (Body), `JetBrains Mono` (Badges)    |
 | **Form Dispatch** | [Web3Forms API](https://web3forms.com/) (100% Free Live Email Delivery) |
 
 ---
@@ -98,6 +98,7 @@ TyrosoftDev/
 ## 🚀 Getting Started
 
 ### 1. Clone & Install
+
 ```bash
 git clone https://github.com/tyrosoftdev/tyrosoftdev.git
 cd TyrosoftDev
@@ -105,18 +106,21 @@ npm install
 ```
 
 ### 2. Environment Setup
+
 The `.env` file is pre-configured with Web3Forms live email dispatching:
 
 ```env
-WEB3FORMS_ACCESS_KEY=5c5d2c4f-f283-4b04-af99-57413583ae39
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=5c5d2c4f-f283-4b04-af99-57413583ae39
-CONTACT_RECEIVER_EMAIL=muneebsaleem402@gmail.com
+WEB3FORMS_ACCESS_KEY=Your Key
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY= Your Key
+CONTACT_RECEIVER_EMAIL=your email address
 ```
 
 ### 3. Run Development Server
+
 ```bash
 npm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the live website.
 
 ---
@@ -124,13 +128,16 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## 🚢 Production Build & Vercel Deployment
 
 ### Build Locally
+
 To test the production build locally:
+
 ```bash
 npm run build
 npm run start
 ```
 
 ### Deploying to Vercel
+
 1. Push this repository to GitHub.
 2. Import the repository into your [Vercel Dashboard](https://vercel.com/new).
 3. Vercel automatically detects Next.js. Click **Deploy**.
