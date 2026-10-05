@@ -133,7 +133,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="lg:col-span-7">
+            <div id="consultation-form" className="lg:col-span-7 scroll-mt-28">
               <Reveal delay={0.1}>
                 <ContactForm />
               </Reveal>
